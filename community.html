@@ -4,32 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Community - SugarMacro</title>
+    <title>커뮤니티 - SugarMacro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar glass">
         <div class="nav-container">
-            <div class="logo"><a href="index.html">Sugar<span class="highlight">Macro</span></a></div>
+            <div class="logo"><a href="index.html">Sugar<span class="highlight text-gradient">Macro</span></a></div>
             <ul class="nav-links">
                 <li><a href="index.html">홈</a></li>
                 <li><a href="usage.html">매뉴얼</a></li>
                 <li><a href="community.html" class="active">커뮤니티</a></li>
-                <li><a href="download.html" class="btn-primary" style="padding: 8px 20px;">다운로드</a></li>
+                <li><a href="download.html" class="btn-primary glow" style="padding: 8px 20px;">다운로드</a></li>
             </ul>
         </div>
     </nav>
 
     <div class="board-container">
-        <h1 style="margin-bottom: 10px;">User Community</h1>
+        <h1 style="margin-bottom: 10px; font-family: 'Orbitron', sans-serif;">User <span
+                class="highlight text-gradient">Community</span></h1>
         <p style="color: var(--text-muted); margin-bottom: 40px;">질문, 노하우 공유, 건의사항을 자유롭게 남겨주세요.</p>
 
         <div class="board-header">
             <div class="board-search">
                 <input type="text" id="searchInput" placeholder="제목이나 내용으로 검색...">
             </div>
-            <button class="btn-primary" onclick="openWriteModal()">글쓰기</button>
+            <button class="btn-primary glow" onclick="openWriteModal()">글쓰기</button>
         </div>
 
         <table class="board-table">
@@ -66,7 +72,7 @@
                     <textarea id="postContent" placeholder="내용을 입력하세요..." required></textarea>
                     <div style="text-align: right; margin-top: 10px;">
                         <button type="button" class="btn-secondary" onclick="closeWriteModal()">취소</button>
-                        <button type="submit" class="btn-primary">등록</button>
+                        <button type="submit" class="btn-primary glow">등록</button>
                     </div>
                 </form>
             </div>
@@ -83,6 +89,15 @@
         </div>
 
     </div>
+
+    <footer
+        style="background: #000; padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color); margin-top: 60px;">
+        <div class="container">
+            <p style="font-size: 0.9rem; color: #444;">
+                &copy; 2025 SugarMacro Project. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <script src="js/community.js"></script>
 </body>
