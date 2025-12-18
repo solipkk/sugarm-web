@@ -61,9 +61,17 @@ git push origin main
 
 ---
 
-## ⚡ 빠른 배포 (한 줄 명령어)
+## ⚡ 빠른 배포
 
+**PowerShell (Windows):**
+```powershell
+# 세미콜론으로 연결 (PowerShell 호환)
+git add .; git commit -m "update: 웹페이지 업데이트"; git push origin main
+```
+
+**Git Bash / Linux / Mac:**
 ```bash
+# &&로 연결
 git add . && git commit -m "update: 웹페이지 업데이트" && git push origin main
 ```
 
