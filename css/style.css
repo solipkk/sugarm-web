@@ -1220,6 +1220,63 @@ body.light-theme {
     .hero-glass {
         margin: 0 10px;
     }
+
+    /* SugarMacro Features Mobile Fix */
+    #features {
+        height: auto !important;
+        padding: 60px 0;
+    }
+
+    .feature-slider {
+        height: auto;
+        min-height: 400px;
+    }
+
+    .slide img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+    }
+
+    .slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slide-content {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 15px;
+        margin-top: -60px;
+        /* 이미지 하단에 겹치게 */
+        border-radius: 0 0 8px 8px;
+    }
+
+    .light-theme .slide-content {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+
+    .light-theme .slide-content h3 {
+        color: #000;
+    }
+
+    .feature-nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav-item {
+        font-size: 0.8rem;
+        flex: 1 1 40%;
+    }
 }
 
 @media (max-width: 480px) {
