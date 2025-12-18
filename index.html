@@ -4,20 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SugarMacro - Professional Game Automation</title>
+    <title>SugarMacro - AI 학습부터 게임 자동화까지</title>
+    <meta name="description" content="YOLO Master Studio로 AI 모델을 학습하고, SugarMacro로 게임을 자동화하세요. 완벽한 게임 자동화 파이프라인.">
     <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700;900&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body class="light-theme">
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo"><a href="index.html">Sugar<span class="highlight text-gradient">Macro</span></a></div>
+
+            <!-- Hamburger Menu (Mobile) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="index.html" class="active">홈</a></li>
-                <li><a href="usage.html">매뉴얼</a></li>
+                <li class="nav-dropdown">
+                    <a href="#">가이드 ▾</a>
+                    <div class="nav-dropdown-content">
+                        <a href="usage_yolo.html">🤖 YOLO Studio 가이드</a>
+                        <a href="usage.html">🎮 SugarMacro 가이드</a>
+                    </div>
+                </li>
                 <li><a href="community.html">커뮤니티</a></li>
                 <li><a href="download.html" class="btn-primary glow" style="padding: 8px 20px;">다운로드</a></li>
             </ul>
@@ -29,21 +44,22 @@
         <div class="hero-content">
             <div class="hero-glass">
                 <h1 class="hero-title">
-                    단순 반복 작업,<br>
-                    이제 <span class="highlight text-gradient">완벽하게 해방</span>되세요.
+                    AI 학습부터<br>
+                    <span class="highlight text-gradient">게임 자동화</span>까지
                 </h1>
                 <p class="hero-desc">
-                    SugarMacro는 딥러닝 비전 기술과 휴먼 라이크 컨트롤을 결합하여,<br>
-                    감지되지 않는 안전하고 강력한 자동화를 제공합니다.
+                    YOLO Master Studio로 게임 객체를 학습하고,<br>
+                    SugarMacro로 지능형 자동화를 경험하세요.<br>
+                    <strong>코딩 없이, 누구나 쉽게.</strong>
                 </p>
                 <div class="cta-group">
                     <a href="download.html" class="btn-primary glow">무료 다운로드</a>
-                    <a href="usage.html" class="btn-secondary">이용 가이드</a>
+                    <a href="#workflow" class="btn-secondary">워크플로우 보기</a>
                 </div>
             </div>
         </div>
         <!-- Background Decorative Asset -->
-        <img src="assets/hero_rich_bg.png" class="hero-bg-img floating" alt="Background Element">
+        <img src="assets/hero_bright_bg.png" class="hero-bg-img floating" alt="Background Element">
     </header>
 
     <!-- Stats Section -->
@@ -51,16 +67,16 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <h3>10k+</h3>
-                    <p>Total Downloads</p>
+                    <h3>v2.0</h3>
+                    <p>Major Update</p>
                 </div>
                 <div class="stat-item">
-                    <h3>99.9%</h3>
-                    <p>Uptime Stability</p>
+                    <h3>YOLO11</h3>
+                    <p>Latest AI Model</p>
                 </div>
                 <div class="stat-item">
-                    <h3>YOLO</h3>
-                    <p>AI Powered</p>
+                    <h3>2-in-1</h3>
+                    <p>Complete Pipeline</p>
                 </div>
                 <div class="stat-item">
                     <h3>0%</h3>
@@ -70,9 +86,61 @@
         </div>
     </section>
 
+    <!-- Workflow Section -->
+    <section id="workflow" class="workflow-section reveal">
+        <div class="container">
+            <h2>Complete <span class="text-gradient-purple">AI Pipeline</span></h2>
+            <p class="subtitle">게임 캡처부터 자동화 매크로까지, 하나의 워크플로우로 완성</p>
+
+            <img src="assets/yolo_workflow.png" alt="YOLO to Macro Workflow" class="workflow-image">
+
+            <div class="cta-group" style="justify-content: center;">
+                <a href="usage_yolo.html" class="btn-purple glow">YOLO Studio 시작하기</a>
+                <a href="usage.html" class="btn-primary glow">SugarMacro 시작하기</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- YOLO Features Section -->
+    <section class="yolo-features reveal">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">
+                <span class="text-gradient-purple">YOLO Master Studio</span> 핵심 기능
+            </h2>
+            <p style="text-align: center; color: var(--text-muted-light); margin-bottom: 40px;">
+                게임 객체 학습을 위한 올인원 AI 도구
+            </p>
+
+            <div class="feature-grid-3">
+                <div class="feature-card">
+                    <img src="assets/feature_data_studio.png" alt="Data Studio">
+                    <h3>Data Studio</h3>
+                    <p>게임 화면 캡처, 자동 라벨링, 데이터 증강을 한 곳에서. AI가 바운딩 박스를 자동으로 생성합니다.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/feature_training_studio.png" alt="Training Studio">
+                    <h3>Training Studio</h3>
+                    <p>YOLO11 모델을 GUI에서 간편하게 학습. 실시간 Loss/mAP 그래프로 학습 상태를 모니터링하세요.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="assets/feature_model_export.png" alt="Model Export">
+                    <h3>Model Export</h3>
+                    <p>학습된 모델을 ONNX, TensorRT로 변환하여 추론 속도를 극대화. 원클릭 내보내기 지원.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SugarMacro Features (Existing) -->
     <section id="features" class="reveal">
         <div class="container">
-            <h2 style="font-size: 2rem; margin-bottom: 20px;">Core Features</h2>
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 10px;">
+                <span class="highlight text-gradient">SugarMacro</span> 핵심 기능
+            </h2>
+            <p style="text-align: center; color: var(--text-muted-light); margin-bottom: 40px;">
+                학습된 AI 모델을 활용한 지능형 게임 자동화
+            </p>
+
             <div class="feature-slider">
                 <!-- Slides Container -->
                 <div class="feature-slides">
@@ -137,15 +205,54 @@
         </div>
     </section>
 
-    <footer style="background: #000; padding: 40px 0; text-align: center; border-top: 1px solid var(--border-color);">
+    <!-- Dual Product CTA -->
+    <section style="padding: 80px 0;">
         <div class="container">
-            <p style="font-size: 0.9rem; color: #444;">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">
+                지금 바로 시작하세요
+            </h2>
+            <div class="product-grid">
+                <div class="product-card yolo">
+                    <h3><span class="text-gradient-purple">YOLO Master Studio</span></h3>
+                    <p class="product-desc">게임 객체 학습을 위한 올인원 AI 도구.<br>데이터 수집, 라벨링, 학습, 내보내기까지.</p>
+                    <p class="product-version">v2.0 | Windows 10/11</p>
+                    <a href="download.html#yolo" class="btn-purple glow">다운로드</a>
+                </div>
+                <div class="product-card macro">
+                    <h3><span class="highlight text-gradient">SugarMacro</span></h3>
+                    <p class="product-desc">학습된 AI를 활용한 지능형 게임 자동화.<br>노드 에디터로 누구나 쉽게.</p>
+                    <p class="product-version">v1.0 | Windows 10/11</p>
+                    <a href="download.html#macro" class="btn-primary glow">다운로드</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.9rem;">
                 &copy; 2025 SugarMacro Project. All rights reserved.
             </p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-dropdown > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('open');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

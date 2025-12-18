@@ -1,4 +1,5 @@
 :root {
+    /* Dark Theme (Default) */
     --bg-color: #0f0f0f;
     /* Deep Dark Grey/Black */
     --surface-bg: #1a1a1a;
@@ -6,6 +7,8 @@
     --primary: #FF9800;
     /* Vibrant Orange */
     --secondary: #FFB74D;
+    --purple: #7c3aed;
+    --purple-light: #a855f7;
     --text-main: #ffffff;
     --text-muted: #b0b0b0;
     --border-color: #333333;
@@ -13,6 +16,14 @@
     /* Korean friendly font */
     --font-body: 'Pretendard', 'Inter', sans-serif;
     --sidebar-width: 250px;
+
+    /* Light Theme Variables */
+    --bg-color-light: #f8f9fa;
+    --surface-bg-light: #ffffff;
+    --card-bg-light: #ffffff;
+    --text-main-light: #050505;
+    --text-muted-light: #444444;
+    --border-color-light: #e9ecef;
 }
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
@@ -735,4 +746,587 @@ body {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* ================================================
+   LIGHT THEME STYLES
+   ================================================ */
+
+body.light-theme {
+    background-color: var(--bg-color-light);
+    color: var(--text-main-light);
+}
+
+.light-theme .navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.light-theme .logo a {
+    color: var(--text-main-light);
+}
+
+.light-theme .nav-links a {
+    color: #333333;
+    font-weight: 600;
+}
+
+.light-theme .nav-links a:hover,
+.light-theme .nav-links a.active {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.light-theme .hero-glass {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .hero-title {
+    color: var(--text-main-light);
+    text-shadow: none;
+}
+
+.light-theme .hero-desc {
+    color: var(--text-muted-light);
+}
+
+.light-theme .hero-animated-bg {
+    background:
+        linear-gradient(transparent 0%, rgba(124, 58, 237, 0.03) 50%, transparent 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+.light-theme .stats-section {
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    border-bottom: 1px solid var(--border-color-light);
+}
+
+.light-theme .stat-item p {
+    color: var(--text-muted-light);
+}
+
+.light-theme #features {
+    background: #ffffff;
+    background-image: none;
+}
+
+.light-theme footer {
+    background: #f8f9fa !important;
+    border-top: 1px solid var(--border-color-light) !important;
+}
+
+.light-theme footer p {
+    color: #444444 !important;
+}
+
+/* Light Theme Community Table */
+.light-theme .board-table th {
+    background: #f1f3f5;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    font-weight: 700;
+}
+
+.light-theme .board-table td {
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.light-theme .board-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Light Theme Buttons & Cards */
+.light-theme .btn-secondary {
+    border-color: #333;
+    color: #333 !important;
+}
+
+.light-theme .btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: #000;
+}
+
+.light-theme .doc-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color-light);
+    color: var(--text-main-light);
+}
+
+.light-theme .doc-sidebar {
+    background: transparent;
+}
+
+.light-theme .doc-nav a {
+    color: var(--text-muted-light);
+}
+
+.light-theme .doc-nav a.active {
+    color: var(--primary);
+    background: rgba(255, 152, 0, 0.1);
+}
+
+.light-theme .feature-grid>div {
+    background: #f8f9fa !important;
+    border: 1px solid var(--border-color-light) !important;
+}
+
+.light-theme .feature-grid p {
+    color: var(--text-muted-light) !important;
+}
+
+/* ================================================
+   PRODUCT CARDS (Dual Download)
+   ================================================ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.product-card.yolo {
+    border-top: 4px solid var(--purple);
+}
+
+.product-card.macro {
+    border-top: 4px solid var(--primary);
+}
+
+.product-card .product-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card .product-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    min-height: 60px;
+}
+
+.product-card .product-version {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.btn-purple {
+    background: var(--purple);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.btn-purple:hover {
+    background: var(--purple-light);
+    transform: translateY(-2px);
+}
+
+.btn-purple.glow:hover {
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.6), 0 0 40px rgba(124, 58, 237, 0.3);
+}
+
+/* Light theme product cards */
+.light-theme .product-card {
+    background: var(--card-bg-light);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.light-theme .product-card h3 {
+    color: var(--text-main-light);
+}
+
+.light-theme .product-card .product-desc {
+    color: var(--text-muted-light);
+}
+
+/* ================================================
+   WORKFLOW SECTION
+   ================================================ */
+
+.workflow-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.workflow-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.workflow-section .subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.workflow-image {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.light-theme .workflow-section .subtitle {
+    color: var(--text-muted-light);
+}
+
+.light-theme .workflow-section h2 {
+    color: var(--text-main-light);
+}
+
+/* ================================================
+   YOLO FEATURE GRID
+   ================================================ */
+
+.yolo-features {
+    padding: 80px 0;
+    background: var(--surface-bg);
+}
+
+.light-theme .yolo-features {
+    background: #f8f9fa;
+}
+
+.feature-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple);
+}
+
+.feature-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.feature-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--purple);
+}
+
+.feature-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.light-theme .feature-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color-light);
+}
+
+.light-theme .feature-card p {
+    color: var(--text-muted-light);
+}
+
+/* ================================================
+   DROPDOWN MENU
+   ================================================ */
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown>a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--surface-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-width: 200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    padding: 10px 0;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+    display: block;
+}
+
+.nav-dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.nav-dropdown-content a:hover {
+    background: rgba(255, 152, 0, 0.1);
+    color: var(--primary);
+}
+
+.light-theme .nav-dropdown-content {
+    background: var(--surface-bg-light);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .nav-dropdown-content a {
+    color: var(--text-muted-light);
+}
+
+/* ================================================
+   HAMBURGER MENU (Mobile)
+   ================================================ */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1002;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text-main);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.light-theme .hamburger span {
+    background: var(--text-main-light);
+}
+
+/* ================================================
+   ENHANCED RESPONSIVE (Mobile First)
+   ================================================ */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--surface-bg);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .light-theme .nav-links {
+        background: var(--surface-bg-light);
+        border-bottom: 1px solid var(--border-color-light);
+    }
+
+    .nav-dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding-left: 20px;
+        display: none;
+    }
+
+    .nav-dropdown.open .nav-dropdown-content {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-bg-img {
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    .workflow-image {
+        border-radius: 8px;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
+    .hero-glass {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-glass {
+        padding: 25px 20px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta-group a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-card {
+        padding: 30px 20px;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+    }
+}
+
+/* ================================================
+   TABS COMPONENT
+   ================================================ */
+
+.tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 15px 30px;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.tab-btn:hover {
+    color: var(--text-main);
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.tab-btn.active.purple {
+    color: var(--purple);
+    border-bottom-color: var(--purple);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.light-theme .tabs {
+    border-bottom-color: var(--border-color-light);
+}
+
+.light-theme .tab-btn {
+    color: var(--text-muted-light);
+}
+
+.light-theme .tab-btn:hover,
+.light-theme .tab-btn.active {
+    color: var(--text-main-light);
+}
+
+/* ================================================
+   GRADIENT TEXT VARIATIONS
+   ================================================ */
+
+.text-gradient-purple {
+    background: linear-gradient(135deg, var(--purple), var(--purple-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* ================================================
+   CTA GROUP LAYOUT
+   ================================================ */
+
+.cta-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
 }
