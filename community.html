@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - SugarMacro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Sugar<span class="highlight">Macro</span></a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="usage.html">매뉴얼</a></li>
+                <li><a href="community.html" class="active">커뮤니티</a></li>
+                <li><a href="download.html" class="btn-primary" style="padding: 8px 20px;">다운로드</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="board-container">
+        <h1 style="margin-bottom: 10px;">User Community</h1>
+        <p style="color: var(--text-muted); margin-bottom: 40px;">질문, 노하우 공유, 건의사항을 자유롭게 남겨주세요.</p>
+
+        <div class="board-header">
+            <div class="board-search">
+                <input type="text" id="searchInput" placeholder="제목이나 내용으로 검색...">
+            </div>
+            <button class="btn-primary" onclick="openWriteModal()">글쓰기</button>
+        </div>
+
+        <table class="board-table">
+            <thead>
+                <tr>
+                    <th width="8%">No</th>
+                    <th width="12%">Category</th>
+                    <th width="45%">Title</th>
+                    <th width="15%">Author</th>
+                    <th width="12%">Date</th>
+                    <th width="8%">Views</th>
+                </tr>
+            </thead>
+            <tbody id="boardList">
+                <!-- JS will populate this -->
+            </tbody>
+        </table>
+
+        <!-- Write Modal -->
+        <div id="writeModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeWriteModal()">&times;</span>
+                <h2 style="margin-bottom: 20px;">새 게시글 작성</h2>
+                <form id="writeForm" class="write-form" onsubmit="submitPost(event)">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" id="postAuthor" placeholder="작성자명" required style="flex: 1;">
+                        <select id="postCategory" style="flex: 1;">
+                            <option value="General">자유</option>
+                            <option value="Question">질문</option>
+                            <option value="Tip">노하우</option>
+                        </select>
+                    </div>
+                    <input type="text" id="postTitle" placeholder="제목을 입력하세요" required>
+                    <textarea id="postContent" placeholder="내용을 입력하세요..." required></textarea>
+                    <div style="text-align: right; margin-top: 10px;">
+                        <button type="button" class="btn-secondary" onclick="closeWriteModal()">취소</button>
+                        <button type="submit" class="btn-primary">등록</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- View Modal -->
+        <div id="viewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeViewModal()">&times;</span>
+                <div id="viewContent">
+                    <!-- JS populated -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/community.js"></script>
+</body>
+
+</html>
